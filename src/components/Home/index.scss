@@ -1,0 +1,80 @@
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    width: 40%;
+    max-height: 90%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-family: "coolvetica";
+    color: whitesmoke;
+    font-size: 53px;
+    font-weight: 400;
+    margin-left: 30px;
+
+    &::before {
+      content: "<h1>";
+      font-family: "La Belle Aurore";
+      color: gold;
+      font-size: 18px;
+      opacity: 0.6;
+      position: absolute;
+      margin-top: -40px;
+      left: 15px;
+    }
+
+    &::after {
+      content: "</h1>";
+      font-family: "La Belle Aurore";
+      color: gold;
+      font-size: 18px;
+      opacity: 0.6;
+      position: absolute;
+      margin: 40px 0 0 20px;
+      animation: fadeIn 1s 1s backwards;
+    }
+
+    img {
+      display: inline-block;
+      opacity: 0;
+      z-index: -999;
+      width: 57px;
+      height: auto;
+      margin: 0 -14px 0 10px;
+      animation: rotateIn 1s linear 2.5s both;
+    }
+  }
+}
+
+h2 {
+  color: #8d8d8d;
+  font-weight: 400;
+  font-size: 11px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  animation: fadeIn 2s 5.5s backwards;
+}
+
+.flat-button {
+  color: gold;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px 18px;
+  border: 1px solid gold;
+  margin-top: 25px;
+  float: left;
+  animation: fadeIn 1s 6s backwards;
+
+  &:hover {
+    background: gold;
+    color: #333;
+  }
+}
