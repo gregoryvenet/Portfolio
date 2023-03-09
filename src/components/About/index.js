@@ -13,8 +13,8 @@ import {
 import Loader from "react-loaders"
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState("text-animate")
   const SplitAbout = "À propos de moi".split("")
+  const [letterClass, setLetterClass] = useState("text-animate")
 
   useEffect(() => {
     setTimeout(() => {
