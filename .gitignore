@@ -26,4 +26,4 @@ yarn-error.log*
 
 src/assets/images/Archives perso/
 
-.dccache
+/.dccache
