@@ -1,7 +1,7 @@
 {
   "homepage": "http://gregoryvenet.github.io/Portfolio",
   "name": "portfolio",
-  "version": "2.1",
+  "version": "2.22",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
