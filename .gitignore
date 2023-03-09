@@ -25,11 +25,3 @@ yarn-error.log*
 # assets
 
 src/assets/images/Archives perso/
-
-#config VSCode
-
-/.vscode
-
-.dccache
-
-.prettierrc
