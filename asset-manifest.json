@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a56287d9.css",
-    "main.js": "/Portfolio/static/js/main.97450f50.js",
+    "main.css": "/Portfolio/static/css/main.cb8a388f.css",
+    "main.js": "/Portfolio/static/js/main.64dd9094.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Logo GV noir & or 3D final.webp": "/Portfolio/static/media/Logo GV noir & or 3D final.dc8874c544f8ab1cde7f.webp",
     "static/media/Logo G noir recadré.webp": "/Portfolio/static/media/Logo G noir recadré.9ef8d5088c4f9b48c0c8.webp",
@@ -9,12 +9,12 @@
     "static/media/LaBelleAurore.woff2": "/Portfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/CoolveticaRg-Regular.woff2": "/Portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.a56287d9.css.map": "/Portfolio/static/css/main.a56287d9.css.map",
-    "main.97450f50.js.map": "/Portfolio/static/js/main.97450f50.js.map",
+    "main.cb8a388f.css.map": "/Portfolio/static/css/main.cb8a388f.css.map",
+    "main.64dd9094.js.map": "/Portfolio/static/js/main.64dd9094.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a56287d9.css",
-    "static/js/main.97450f50.js"
+    "static/css/main.cb8a388f.css",
+    "static/js/main.64dd9094.js"
   ]
 }
