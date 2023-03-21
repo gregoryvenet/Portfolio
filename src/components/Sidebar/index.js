@@ -4,6 +4,7 @@ import LogoGV from "../../assets/images/Logo GV noir & or 3D final.webp"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import WeatherWidget from "../WeatherWidget"
 
 const Sidebar = () => (
   <div className="nav-bar">
@@ -11,6 +12,7 @@ const Sidebar = () => (
       <img src={LogoGV} alt="logo Grégory VENET" />
       <h3>Grégory VENET</h3>
     </Link>
+    <WeatherWidget/>
     <nav>
       <NavLink exact="true" activeclassname="active" to="/Portfolio">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />

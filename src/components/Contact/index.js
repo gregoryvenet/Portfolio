@@ -20,20 +20,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_p8f2kpb",
-        "template_oyqdggk",
+        process.env.REACT_APP_MY_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         refForm.current,
-        "vknSISy7aewzAmIdF"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
           alert("Message envoyé avec succès!")
-			  console.log(result.text)
-			  window.location.reload(false)
+          console.log(result.text)
+          window.location.reload(false)
         },
         (error) => {
-			console.log(error.text)
-			alert("Echec d'envoi du message, veuillez réessayer s'il vous plait.")
+          console.log(error.text)
+          alert("Echec d'envoi du message, veuillez réessayer s'il vous plait.")
         }
       )
   }
