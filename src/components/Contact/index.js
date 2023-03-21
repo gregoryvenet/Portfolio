@@ -16,7 +16,6 @@ const Contact = () => {
   }, [])
 
   const sendEmail = (e) => {
-    e.preventDefault()
 
     emailjs
       .sendForm(
@@ -28,8 +27,6 @@ const Contact = () => {
       .then(
         (result) => {
           alert("Message envoyé avec succès!")
-          console.log(result.text)
-          window.location.reload(false)
         },
         (error) => {
           console.log(error.text)
