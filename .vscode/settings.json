@@ -55,5 +55,7 @@
 		"variés",
 		"veille",
 		"vidéo"
-	]
+	],
+	"easycode.model": "gpt-4",
+	"easycode.userEmail": "gregvenet@gmail.com"
 }

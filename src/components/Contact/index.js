@@ -3,6 +3,7 @@ import AnimatedLetters from "../AnimatedLetters"
 import { useEffect, useRef, useState } from "react"
 import { Loader } from "react-loaders"
 import emailjs from "@emailjs/browser"
+import { AlertEmailError, AlertEmailSuccess } from "../Alert"
 
 const Contact = () => {
   const splitContact = "Contactez-moi".split("")
@@ -16,6 +17,7 @@ const Contact = () => {
   }, [])
 
   const sendEmail = (e) => {
+    e.preventDefault()
 
     emailjs
       .sendForm(
@@ -26,11 +28,12 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          alert("Message envoyé avec succès!")
+          AlertEmailSuccess()
+          // window.location.reload(false)
         },
         (error) => {
+          AlertEmailError()
           console.log(error.text)
-          alert("Echec d'envoi du message, veuillez réessayer s'il vous plait.")
         }
       )
   }
