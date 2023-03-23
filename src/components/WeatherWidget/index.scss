@@ -1,6 +1,10 @@
-.sidebar{
-	width: 500%;
-	height: 100px;
-	color: aliceblue;
-	font-size: 12px;
+.weatherWidget{
+	display: flex;
+	align-items: center;
+}
+// WeatherWidget/index.scss
+.weather-icon {
+  width: 64px;
+  height: 64px;
+  margin: 10px 0;
 }
