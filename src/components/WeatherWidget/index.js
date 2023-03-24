@@ -157,10 +157,14 @@ const WeatherWidget = () => {
           <h3>{weatherData.name}</h3>
           <h4>{weatherData.weather[0].description}</h4>
           {getWeatherIcon()}
-          <p>{weatherData.main.temp}°C</p>
+          <div className="thermo-container">
+            <img src={thermoCelsius} alt="thermometer celsius icon" />
+            <h4>{weatherData.main.temp}°C</h4>
+          </div>
           <div className="wind-container">
-            <img src={wind} alt="" />
-          <h4>{weatherData.wind.speed}km/h</h4></div>
+            <img src={wind} alt="wind icon" />
+            <h4>{weatherData.wind.speed}km/h</h4>
+          </div>
           <div className="humidity-container">
             <img src={humidity} alt="humidity icon" />
             <h4>{weatherData.main.humidity}%</h4>
