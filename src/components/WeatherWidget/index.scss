@@ -1,10 +1,21 @@
-.weatherWidget{
-	display: flex;
-	align-items: center;
-}
-// WeatherWidget/index.scss
+// .weatherWidget{
+// 	display: flex;
+// 	align-items: center;
+// }
 .weather-icon {
-  width: 64px;
-  height: 64px;
-  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  color: gold;
+
+  h3{
+    margin: 0;
+    width: 100%;
+  }
+
+  p{
+    font-size: 150%;
+  }
 }

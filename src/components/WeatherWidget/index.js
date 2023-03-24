@@ -1,7 +1,25 @@
-// WeatherWidget/index.js
 import { useState, useEffect } from "react"
 import { AlertGps } from "../Alert"
 import "./index.scss"
+
+import clearSkyDay from "../../assets/icons/01d.svg"
+import clearSkyNight from "../../assets/icons/01n.svg"
+import fewCloudsDay from "../../assets/icons/02d.svg"
+import fewCloudsNight from "../../assets/icons/02n.svg"
+import scatteredClouds from "../../assets/icons/03dn.svg"
+import brokenCloudsDay from "../../assets/icons/04d.svg"
+import brokenCloudsNight from "../../assets/icons/04n.svg"
+import showerRain from "../../assets/icons/09dn.svg"
+import rainDay from "../../assets/icons/10d.svg"
+import rainNight from "../../assets/icons/10n.svg"
+import thunderstormDay from "../../assets/icons/11d.svg"
+import thunderstormNight from "../../assets/icons/11n.svg"
+import snowDay from "../../assets/icons/13d.svg"
+import snowNight from "../../assets/icons/13n.svg"
+import mistDay from "../../assets/icons/50d.svg"
+import mistNight from "../../assets/icons/50n.svg"
+import freezingRainDay from "../../assets/icons/freezing rain d.svg"
+import freezingRainNight from "../../assets/icons/freezing rain n.svg"
 
 const WeatherWidget = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY
@@ -36,6 +54,7 @@ const WeatherWidget = () => {
           const data = await response.json()
           setWeatherData(data)
         } catch (error) {
+          AlertGps()
           console.error(error)
         }
       }
@@ -45,46 +64,93 @@ const WeatherWidget = () => {
   }, [location, apiKey])
 
   const getWeatherIcon = (weatherId) => {
+    if (!weatherData) return console.log("ERREUR weatherDATA")
+    const currentTime = new Date().getTime() / 1000
+    console.log("currentTime: ", currentTime)
+    const isDayTime =
+      currentTime >= weatherData.sys.sunrise &&
+      currentTime <= weatherData.sys.sunset
+    console.log("isDayTime: ", isDayTime)
+    //Orage 11j
     if (weatherId >= 200 && weatherId <= 232) {
-      return "../../assets/icons/thunderstorms.svg"
-    } else if (weatherId >= 300 && weatherId <= 321) {
-      return "../../assets/icons/drizzle.svg"
-    } else if (weatherId >= 500 && weatherId <= 504) {
-      return "../../assets/icons/rain.svg"
-    } else if (weatherId === 511) {
-      return "../../assets/icons/smoke.svg"
-    } else if (weatherId >= 520 && weatherId <= 531) {
-      return "../../assets/icons/showers.svg"
-    } else if (weatherId >= 600 && weatherId <= 622) {
-      return "../../assets/icons/snow.svg"
-    } else if (weatherId >= 701 && weatherId <= 781) {
-      return "../../assets/icons/fog.svg"
-    } else if (weatherId === 800) {
-      return "../../assets/icons/clear-day.svg"
-    } else if (weatherId === 801) {
-      return "../../assets/icons/partly-cloudy-day.svg"
-    } else if (weatherId >= 802 && weatherId <= 804) {
-      return "../../assets/icons/cloudy.svg"
-    } else {
-      return "../../assets/icons/clear-day.svg"
-    }
-  }
-
-  return (
-    <div>
-      {weatherData ? (
-        <div>
-          <h1>{weatherData.name}</h1>
-          <img
-            src={getWeatherIcon(weatherData.weather[0].id)}
-            alt="Weather icon"
-            className="weather-icon"
-          />
-          <h2>{weatherData.weather[0].description}</h2>
-          <h3>{weatherData.main.temp}°C</h3>
-        </div>
+      return isDayTime ? (
+        <img src={thunderstormDay} alt="thunderstorm icon" />
       ) : (
-        <p>Chargement des données météorologiques...</p>
+        <img src={thunderstormNight} alt="thunderstorm icon" />
+      )
+      //Bruine 09j
+    } else if (weatherId >= 300 && weatherId <= 321) {
+      return <img src={showerRain} alt="shower rain icon" />
+      //Pluie avec soleil/lune 10j
+    } else if (weatherId >= 500 && weatherId <= 504) {
+      return isDayTime ? (
+        <img src={rainDay} alt="rain day icon" />
+      ) : (
+        <img src={rainNight} alt="rain night icon" />
+      )
+      //Pluie verglassante 13j
+    } else if (weatherId === 511) {
+      return isDayTime ? (
+        <img src={freezingRainDay} alt="freezing rain day icon" />
+      ) : (
+        <img src={freezingRainNight} alt="freezing rain night icon" />
+      )
+      //Pluie gris total 09j
+    } else if (weatherId >= 520 && weatherId <= 531) {
+      return <img src={showerRain} alt="thunderstorm day icon" />
+      //Neige 13j
+    } else if (weatherId >= 600 && weatherId <= 622) {
+      return isDayTime ? (
+        <img src={snowDay} alt="snow day icon" />
+      ) : (
+        <img src={snowNight} alt="snow night icon" />
+      )
+      //Brume 50j
+    } else if (weatherId >= 701 && weatherId <= 781) {
+      return isDayTime ? (
+        <img src={mistDay} alt="mist day icon" />
+      ) : (
+        <img src={mistNight} alt="mist night icon" />
+      )
+      //ciel clair 01dn
+    } else if (weatherId === 800) {
+      return isDayTime ? (
+        <img src={clearSkyDay} alt="clear sky day icon" />
+      ) : (
+        <img src={clearSkyNight} alt="clear sky night icon" />
+      )
+      //Quelques Nuages 11-25 % 02dn
+    } else if (weatherId === 801) {
+      return isDayTime ? (
+        <img src={fewCloudsDay} alt="few clouds day icon" />
+      ) : (
+        <img src={fewCloudsNight} alt="few clouds night icon" />
+      )
+      //nuages ​​dispersés : 25-50 % 03dn
+    } else if (weatherId === 802) {
+      return <img src={scatteredClouds} alt="scattered clouds icon" />
+      //nuages ​​fragmentés : 51-84 % 04dn
+    } else if (weatherId === 803 && weatherId === 804) {
+      return isDayTime ? (
+        <img src={brokenCloudsDay} alt="broken clouds day icon" />
+      ) : (
+        <img src={brokenCloudsNight} alt="broken clouds night icon" />
+        )
+      } else{
+        return <p>Icone non disponible</p>};
+    }
+
+  console.log("getWeatherIcon: ", getWeatherIcon())
+  return (
+    <div className="weather-icon">
+      {weatherData && (
+        <>
+          <h3>{weatherData.name}</h3>
+          <h4>{weatherData.weather[0].description}</h4>
+          {getWeatherIcon()}
+          <p>{weatherData.main.temp}°C</p>
+          <h4>{weatherData.wind.speed}km/h</h4>
+        </>
       )}
     </div>
   )
