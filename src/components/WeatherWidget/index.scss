@@ -2,20 +2,42 @@
 // 	display: flex;
 // 	align-items: center;
 // }
-.weather-icon {
-
+.weather-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
   color: gold;
 
-  h3{
+  h3 {
     margin: 0;
     width: 100%;
   }
 
-  p{
-    font-size: 150%;
+  p {
+    font-size: 110%;
+  }
+}
+.wind-container {
+  display: flex;
+  align-items: self-end;
+  height: 40px;
+  width: 60%;
+  margin-left: -40px;
+
+  h4 {
+    margin: 0 0 4px -15px;
+  }
+}
+
+.humidity-container {
+  display: flex;
+  align-items: self-end;
+  height: 40px;
+  width: 60%;
+  margin-left: -28px;
+
+  h4{
+    margin: 0 0 4px -5px
   }
 }

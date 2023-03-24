@@ -19,13 +19,15 @@ import snowDay from "../../assets/icons/13d.svg"
 import snowNight from "../../assets/icons/13n.svg"
 import mistDay from "../../assets/icons/50d.svg"
 import mistNight from "../../assets/icons/50n.svg"
-import freezingRainDay from "../../assets/icons/freezing rain d.svg"
-import freezingRainNight from "../../assets/icons/freezing rain n.svg"
+import freezingRainDay from "../../assets/icons/freezingRaind.svg"
+import freezingRainNight from "../../assets/icons/freezingRainn.svg"
+import wind from "../../assets/icons/windsockdn.svg"
+import thermoCelsius from "../../assets/icons/thermometerCelsiusdn.svg"
+import humidity from "../../assets/icons/humiditydn.svg"
 
 const WeatherWidget = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY
   const [weatherData, setWeatherData] = useState(null)
-  console.log("weatherData: ", weatherData)
   const [location, setLocation] = useState(null)
 
   useEffect(() => {
@@ -149,14 +151,20 @@ const WeatherWidget = () => {
   }
 
   return (
-    <div className="weather-icon">
+    <div className="weather-container">
       {weatherData && (
         <>
           <h3>{weatherData.name}</h3>
           <h4>{weatherData.weather[0].description}</h4>
           {getWeatherIcon()}
           <p>{weatherData.main.temp}°C</p>
-          <h4>{weatherData.wind.speed}km/h</h4>
+          <div className="wind-container">
+            <img src={wind} alt="" />
+          <h4>{weatherData.wind.speed}km/h</h4></div>
+          <div className="humidity-container">
+            <img src={humidity} alt="humidity icon" />
+            <h4>{weatherData.main.humidity}%</h4>
+          </div>
         </>
       )}
     </div>
