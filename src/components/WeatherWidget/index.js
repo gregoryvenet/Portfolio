@@ -23,7 +23,7 @@ import freezingRainNight from "../../assets/icons/freezing rain n.svg"
 
 const WeatherWidget = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY
-  const [weatherData, setWeatherData] = useState(null)
+  const [ weatherData, setWeatherData ] = useState(null)
   const [location, setLocation] = useState(null)
 
   useEffect(() => {
@@ -63,84 +63,82 @@ const WeatherWidget = () => {
     fetchWeatherData()
   }, [location, apiKey])
 
-  const getWeatherIcon = (weatherId) => {
+  const getWeatherIcon = () => {
+    const weatherId = weatherData.weather[0].id
     if (!weatherData) return console.log("ERREUR weatherDATA")
     const currentTime = new Date().getTime() / 1000
-    console.log("currentTime: ", currentTime)
     const isDayTime =
       currentTime >= weatherData.sys.sunrise &&
       currentTime <= weatherData.sys.sunset
-    console.log("isDayTime: ", isDayTime)
     //Orage 11j
     if (weatherId >= 200 && weatherId <= 232) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={thunderstormDay} alt="thunderstorm icon" />
-      ) : (
+      :
         <img src={thunderstormNight} alt="thunderstorm icon" />
-      )
+
       //Bruine 09j
     } else if (weatherId >= 300 && weatherId <= 321) {
       return <img src={showerRain} alt="shower rain icon" />
       //Pluie avec soleil/lune 10j
     } else if (weatherId >= 500 && weatherId <= 504) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={rainDay} alt="rain day icon" />
-      ) : (
+       :
         <img src={rainNight} alt="rain night icon" />
-      )
+
       //Pluie verglassante 13j
     } else if (weatherId === 511) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={freezingRainDay} alt="freezing rain day icon" />
-      ) : (
+       :
         <img src={freezingRainNight} alt="freezing rain night icon" />
-      )
+
       //Pluie gris total 09j
     } else if (weatherId >= 520 && weatherId <= 531) {
       return <img src={showerRain} alt="thunderstorm day icon" />
       //Neige 13j
     } else if (weatherId >= 600 && weatherId <= 622) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={snowDay} alt="snow day icon" />
-      ) : (
+       :
         <img src={snowNight} alt="snow night icon" />
-      )
+
       //Brume 50j
     } else if (weatherId >= 701 && weatherId <= 781) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={mistDay} alt="mist day icon" />
-      ) : (
+       :
         <img src={mistNight} alt="mist night icon" />
-      )
+
       //ciel clair 01dn
     } else if (weatherId === 800) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={clearSkyDay} alt="clear sky day icon" />
-      ) : (
+       :
         <img src={clearSkyNight} alt="clear sky night icon" />
-      )
+
       //Quelques Nuages 11-25 % 02dn
     } else if (weatherId === 801) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={fewCloudsDay} alt="few clouds day icon" />
-      ) : (
+       :
         <img src={fewCloudsNight} alt="few clouds night icon" />
-      )
+
       //nuages ​​dispersés : 25-50 % 03dn
     } else if (weatherId === 802) {
       return <img src={scatteredClouds} alt="scattered clouds icon" />
       //nuages ​​fragmentés : 51-84 % 04dn
     } else if (weatherId === 803 && weatherId === 804) {
-      return isDayTime ? (
+      return isDayTime ?
         <img src={brokenCloudsDay} alt="broken clouds day icon" />
-      ) : (
+       :
         <img src={brokenCloudsNight} alt="broken clouds night icon" />
-        )
-      } else{
-        return <p>Icone non disponible</p>};
-    }
 
-  console.log("getWeatherIcon: ", getWeatherIcon())
+      } else{
+        return <p>Icone non disponible</p>}
+      }
+
   return (
     <div className="weather-icon">
       {weatherData && (
