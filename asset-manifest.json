@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.417baa98.css",
-    "main.js": "/Portfolio/static/js/main.330edd91.js",
+    "main.js": "/Portfolio/static/js/main.db9621df.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Logo GV noir & or 3D final.webp": "/Portfolio/static/media/Logo GV noir & or 3D final.dc8874c544f8ab1cde7f.webp",
     "static/media/Logo G noir recadré.webp": "/Portfolio/static/media/Logo G noir recadré.9ef8d5088c4f9b48c0c8.webp",
@@ -28,11 +28,11 @@
     "static/media/01d.svg": "/Portfolio/static/media/01d.54288da67b71b4b19483d373d683257f.svg",
     "static/media/03dn.svg": "/Portfolio/static/media/03dn.f6e6108ec3b4605bda2aca61f011e8e8.svg",
     "main.417baa98.css.map": "/Portfolio/static/css/main.417baa98.css.map",
-    "main.330edd91.js.map": "/Portfolio/static/js/main.330edd91.js.map",
+    "main.db9621df.js.map": "/Portfolio/static/js/main.db9621df.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.417baa98.css",
-    "static/js/main.330edd91.js"
+    "static/js/main.db9621df.js"
   ]
 }
