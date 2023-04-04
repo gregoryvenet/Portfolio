@@ -1,0 +1,26 @@
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+  padding-bottom: 1rem;
+  .iconWeather{
+    margin: -0.5rem 0;
+  }
+}
+
+.thermo-container, .wind-container, .humidity-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 90%;
+  img{
+    width: 3rem;
+    height: 3rem;
+  }
+
+  h4 {
+    margin: 0 0 -4px -20px;
+  }
+}

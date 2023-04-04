@@ -4,15 +4,15 @@ import LogoGV from "../../assets/images/Logo GV noir & or 3D final.webp"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import WeatherWidget from "../WeatherWidget"
+import Weather from "../Weather"
 
 const Sidebar = () => (
   <div className="nav-bar">
-    <Link className="logo" to="/Portfolio">
+    <Link to="/Portfolio">
       <img src={LogoGV} alt="logo Grégory VENET" />
       <h3>Grégory VENET</h3>
     </Link>
-    <WeatherWidget/>
+    <Weather/>
     <nav>
       <NavLink exact="true" activeclassname="active" to="/Portfolio">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
