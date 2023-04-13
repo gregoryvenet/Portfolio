@@ -6,17 +6,26 @@
 
 .top-tags {
   bottom: auto;
-  top: 30px;
+  top: 35px;
 }
 
 .tags {
   position: absolute;
-  font-family: "la belle Aurore", cursive;
-  color: gold;
-  font-size: 18px;
-  opacity: 0.6;
   bottom: 0;
-  left: 110px;
+  left: 100px;
+  color: gold;
+  opacity: 0.6;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+}
+.top-tag-html{
+  position: absolute;
+  color: gold;
+  opacity: 0.6;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+  margin: 10px 0 0 80px;
+
 }
 
 .bottom-tag-html {
@@ -24,75 +33,86 @@
 }
 
 .container {
-  position: absolute;
-  opacity: 0;
-  width: 150%;
+  width: 100%;
   will-change: contents;
   height: 90%;
   min-height: 566px;
+  position: absolute;
+  opacity: 0;
   top: 5%;
   margin: 0 auto;
+  z-index: 1;
   transform-style: preserve-3d;
-  animation: fadeIn 1s 0.5s forwards;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
 }
 
-.contact-page,
-.about-page {
-  h1 {
-    font-size: 53px;
-    font-family: "coolvetica";
-    color: gold;
-    font-weight: 400;
-    margin-top: 0;
-    position: relative;
-    margin-bottom: 40px;
-    left: 10px;
+.container.contact-page,
+.container.about-page,
+.container.portfolio-page {
 
-    &::before {
-      content: "<h1>";
-      font-family: "La Belle Aurore";
-      font-size: 18px;
-      position: absolute;
-      margin-top: -10px;
+    h1 {
+      font-size: 53px;
+      font-family: 'Coolvetica';
+      color: #ffd700;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 40px;
       left: -10px;
-      opacity: 0.6;
-      line-height: 18px;
+
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 18px;
+        position: absolute;
+        margin-top: -10px;
+        left: -10px;
+        opacity: 0.6;
+        line-height: 18px;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 18px;
+        line-height: 18px;
+        position: absolute;
+        left: -30px;
+        bottom: -20px;
+        margin-left: 20px;
+        opacity: 0.6;
+      }
     }
 
-    &::after {
-      content: "</h1>";
-      font-family: "La Belle Aurore";
-      font-size: 18px;
-      position: absolute;
-      margin-left: 20px;
-      left: -30px;
-      bottom: -20px;
-      opacity: 0.6;
-      line-height: 18px;
+    p {
+      font-size: 13px;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 300;
+      max-width: fit-content;
+      opacity: 0;
+      animation: test 2s linear forwards;
+      @keyframes test {
+        to {
+        animation: pulse 1s;
+        opacity: 1;
+      }
     }
-  }
-  p {
-    font-size: 13px;
-    color: whitesmoke;
-    font-family: sans-serif;
-    font-weight: 300;
-    min-width: fit-content;
-    padding: 5px;
-    opacity: 0;
-    animation: fadeInUp 2s 3.8s forwards;
-
-    &:nth-of-type(1) {
-      animation-delay: 3s;
-    }
-
-    &:nth-of-type(2) {
-      animation-delay: 3.5s;
+      &:nth-of-type(1) {
+        animation-delay: 3s;
+      }
+      &:nth-of-type(2) {
+        padding: 10px 0;
+        animation-delay: 3.5s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 4s;
+      }
     }
 
-    &:nth-of-type(3) {
-      animation-delay: 4s;
-    }
-  }
   .text-zone {
     position: absolute;
     left: 10%;
@@ -106,7 +126,55 @@
 
   .text-animate-hover {
     &:hover {
-      color: whitesmoke;
+      color: #fff;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page {
+    position: initial;
+  }
+
+  .container {
+    position: initial;
+    height: 100%;
+    min-height: auto;
+
+    &.contact-page,
+    &.about-page,
+    &.portfolio-page {
+      .text-zone {
+        position: initial;
+        transform: none;
+        width: 100%;
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    }
+
+    &.portfolio-page {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+
+      h1.page-title {
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .image-box {
+        height: 200px;
+        max-width: calc(50% - 10px);
+      }
+    }
+  }
+
+  .stage-cube-cont {
+    position: initial;
+    width: 100%;
+    height: 0%;
+    overflow: visible;
   }
 }

@@ -90,8 +90,7 @@ const Contact = () => {
                   <input
                     className="flat-button"
                     type="submit"
-                    value="ENVOYER"
-                  />
+                    value="ENVOYER" />
                 </li>
               </ul>
             </form>

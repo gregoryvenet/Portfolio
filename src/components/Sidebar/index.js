@@ -12,26 +12,51 @@ const Sidebar = () => (
       <img src={LogoGV} alt="logo Grégory VENET" />
       <h3>Grégory VENET</h3>
     </Link>
-    <Weather/>
+    <Weather />
     <nav>
-      <NavLink exact="true" activeclassname="active" to="/Portfolio">
-        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        to="/Portfolio"
+        role="dialog"
+        aria-label="Portfolio"
+      >
+        <FontAwesomeIcon
+          icon={faHome}
+          color="#4d4d4e"
+          aria-label="icone page d'acceuil"
+          tabindex="-1"
+        />
       </NavLink>
       <NavLink
         exact="true"
         activeclassname="active"
         className="about-link"
         to="/about"
+        role="dialog"
+        aria-label="a propos"
       >
-        <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+        <FontAwesomeIcon
+          icon={faUser}
+          color="#4d4d4e"
+          aria-label="icone page à propos"
+          tabindex="-1"
+        />
       </NavLink>
       <NavLink
         exact="true"
         activeclassname="active"
         className="contact-link"
         to="/contact"
+        role="dialog"
+        aria-label="contact"
       >
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          color="#4d4d4e"
+          aria-label="icone page contact"
+          tabindex="-1"
+        />
       </NavLink>
     </nav>
     <ul>
@@ -40,8 +65,13 @@ const Sidebar = () => (
           target="_blank"
           rel="noreferrer"
           href="https://www.linkedin.com/in/gregoryvenet/"
+          title="Profil LinkedIn de Gregory Venet"
         >
-          <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            color="#4d4d4e"
+            aria-label="icone site LinkedIn"
+          />
         </a>
       </li>
       <li>
@@ -49,8 +79,13 @@ const Sidebar = () => (
           target="_blank"
           rel="noreferrer"
           href="https://github.com/gregoryvenet"
+          title="Profil github de Gregory Venet"
         >
-          <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+          <FontAwesomeIcon
+            icon={faGithub}
+            color="#4d4d4e"
+            aria-label="icone accès site github"
+          />
         </a>
       </li>
     </ul>

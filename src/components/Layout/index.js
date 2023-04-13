@@ -5,10 +5,12 @@ import {AlertBuild}  from "../Alert"
 
 const Layout = () => {
   return (
-    <div className="App">
-      <AlertBuild />
+    <>
       <Sidebar />
+      <AlertBuild />
       <div className="page">
+        <span className="top-tag-html">&lt;html&gt;</span>
+        <br />
         <span className="tags top-tags">&lt;body&gt;</span>
 
         <Outlet />
@@ -18,7 +20,7 @@ const Layout = () => {
           <span className="bottom-tag-html">&lt;/html&gt;</span>
         </span>
       </div>
-    </div>
+    </>
   )
 }
 

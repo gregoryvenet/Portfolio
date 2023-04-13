@@ -57,5 +57,11 @@
 		"vidéo"
 	],
 	"easycode.model": "gpt-3.5-turbo",
-	"easycode.userEmail": "gregvenet@gmail.com"
+	"easycode.userEmail": "gregvenet@gmail.com",
+	"editor.guides.bracketPairs": true,
+	"editor.guides.bracketPairsHorizontal": "active",
+	"editor.gotoLocation.multipleTypeDefinitions": "peek",
+	"editor.linkedEditing": false,
+	"editor.mouseWheelZoom": false,
+	"terminal.integrated.fontSize": 12
 }

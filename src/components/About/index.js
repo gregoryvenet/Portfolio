@@ -37,7 +37,7 @@ const About = () => {
           Je suis un développeur Web Full-Stack passionné à la recherche d'un
           emploi dans une entreprise qui, idéalement, appliquent les dernières
           technologies sur des projets ambitieux et variés en Suisse.
-        </p>
+          </p>
         <p>
           Au cours de mon parcours, j’ai acquis des compétences comme
           l’autonomie, la rigueur, l’ouverture d’esprit, le travail en équipe
@@ -57,22 +57,22 @@ const About = () => {
       <div className="stage-cube-cont">
         <div className="cubespinner">
           <div className="face1">
-            <FontAwesomeIcon icon={faSass} color="#ce689a" />
+            <FontAwesomeIcon icon={faSass} color="#ce689a" aria-label="icone langage sass"/>
           </div>
           <div className="face2">
-            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+            <FontAwesomeIcon icon={faHtml5} color="#F06529" aria-label="icone langage html5"/>
           </div>
           <div className="face3">
-            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+            <FontAwesomeIcon icon={faCss3} color="#28A4D9" aria-label="icone langage css3"/>
           </div>
           <div className="face4">
-            <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+            <FontAwesomeIcon icon={faReact} color="#5ED4F4" aria-label="icone langage react"/>
           </div>
           <div className="face5">
-            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" aria-label="icone langage Javascript"/>
           </div>
           <div className="face6">
-            <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" aria-label="icone langage git"/>
           </div>
         </div>
       </div>

@@ -5,22 +5,30 @@
   justify-content: space-between;
   color: whitesmoke;
   padding-bottom: 1rem;
-  .iconWeather{
+
+  h4{
+    text-align: center;
+  }
+
+  .iconWeather {
     margin: -0.5rem 0;
   }
 }
 
-.thermo-container, .wind-container, .humidity-container {
+.thermo-container,
+.wind-container,
+.humidity-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 90%;
-  img{
+  img {
     width: 3rem;
     height: 3rem;
+    margin: 0;
   }
 
   h4 {
-    margin: 0 0 -4px -20px;
+    margin: 0 0 -3px -20px;
   }
 }
