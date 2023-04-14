@@ -1,5 +1,3 @@
-
-import "./index.scss";
 import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer, toast } from "react-toastify"
 

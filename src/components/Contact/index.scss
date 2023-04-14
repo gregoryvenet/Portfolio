@@ -5,12 +5,8 @@
   ul {
     display: flex;
     flex-flow: wrap;
-    padding: 0;
-    margin: 0;
 
     li {
-      padding: 0;
-      margin: 0;
       width: 100%;
       list-style: none;
       margin-bottom: 10px;
@@ -86,33 +82,30 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: backInRight 1s 1.2s;
-  animation-fill-mode: forwards;
+  animation: backInRight 1s 1.2s forwards;
 }
 
 .info-map {
   position: absolute;
-  background: #000;
+  background: #181818;
   top: 50px;
   right: 30%;
   z-index: 999999;
   width: 267px;
   padding: 20px;
-  color: #fff;
+  color: whitesmoke;
   font-family: "Helvetica";
   font-size: 17px;
   font-weight: 300;
   opacity: 0;
-  animation: fadeIn 1s 1.5s;
-  animation-fill-mode: forwards;
+  animation: fadeIn 1s 1.5s forwards;
 
   span {
-    font-size: 16px;
-
-    span {
-      color: #ffd700;
-    }
-  }
+    display: block;
+    font-size: 14px;
+    color: gold;
+    padding-top: 20px;
+}
 }
 
 @media screen and (max-width: 1200px) {

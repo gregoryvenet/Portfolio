@@ -54,7 +54,7 @@
     h1 {
       font-size: 53px;
       font-family: 'Coolvetica';
-      color: #ffd700;
+      color: gold;
       font-weight: 400;
       margin-top: 0;
       position: relative;
@@ -64,7 +64,7 @@
       &:before {
         content: '<h1>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: gold;
         font-size: 18px;
         position: absolute;
         margin-top: -10px;
@@ -76,7 +76,7 @@
       &:after {
         content: '<h1/>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: gold;
         font-size: 18px;
         line-height: 18px;
         position: absolute;
@@ -89,7 +89,7 @@
 
     p {
       font-size: 13px;
-      color: #fff;
+      color: whitesmoke;
       font-family: sans-serif;
       font-weight: 300;
       max-width: fit-content;
@@ -97,7 +97,6 @@
       animation: test 2s linear forwards;
       @keyframes test {
         to {
-        animation: pulse 1s;
         opacity: 1;
       }
     }
@@ -126,7 +125,7 @@
 
   .text-animate-hover {
     &:hover {
-      color: #fff;
+      color: whitesmoke;
     }
   }
 }

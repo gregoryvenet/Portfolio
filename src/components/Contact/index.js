@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Loader } from "react-loaders"
 import emailjs from "@emailjs/browser"
 import { AlertEmailError, AlertEmailSuccess } from "../Alert"
+import StreetMap from "../StreetMap"
 
 const Contact = () => {
   const splitContact = "Contactez-moi".split("")
@@ -29,7 +30,7 @@ const Contact = () => {
       .then(
         (result) => {
           AlertEmailSuccess()
-          // window.location.reload(false)
+          window.location.reload(false)
         },
         (error) => {
           AlertEmailError()
@@ -90,11 +91,26 @@ const Contact = () => {
                   <input
                     className="flat-button"
                     type="submit"
-                    value="ENVOYER" />
+                    value="ENVOYER"
+                  />
                 </li>
               </ul>
             </form>
           </div>
+        </div>
+        <div className="info-map">
+          Grégory VENET
+          <br />
+          Avenue Victor-Raffy 46a
+          <br />
+          1012 Lausanne Vd
+          <br />
+          Suisse
+          <br />
+          <span>gregvenet@gmail.com</span>
+        </div>
+        <div className="map-wrap">
+          <StreetMap />
         </div>
       </div>
       <Loader type="pacman" />
