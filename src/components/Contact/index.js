@@ -1,6 +1,7 @@
 import "./index.scss"
 import AnimatedLetters from "../AnimatedLetters"
 import { useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Loader } from "react-loaders"
 import emailjs from "@emailjs/browser"
 import { AlertEmailError, AlertEmailSuccess } from "../Alert"
@@ -8,6 +9,7 @@ import StreetMap from "../StreetMap"
 
 const Contact = () => {
   const splitContact = "Contactez-moi".split("")
+  const navigate = useNavigate()
   const [letterClass, setLetterClass] = useState("text-animate")
   const refForm = useRef()
 
@@ -21,16 +23,16 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_MY_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        refForm.current,
-        process.env.REACT_APP_PUBLIC_KEY
+    .sendForm(
+      process.env.REACT_APP_MY_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      refForm.current,
+      process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
           AlertEmailSuccess()
-          window.location.reload(false)
+          navigate("/*")
         },
         (error) => {
           AlertEmailError()
