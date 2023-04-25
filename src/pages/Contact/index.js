@@ -1,11 +1,11 @@
 import "./index.scss"
-import AnimatedLetters from "../AnimatedLetters"
+import AnimatedLetters from "../../components/AnimatedLetters"
 import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Loader } from "react-loaders"
 import emailjs from "@emailjs/browser"
-import { AlertEmailError, AlertEmailSuccess } from "../Alert"
-import StreetMap from "../StreetMap"
+import { AlertEmailError, AlertEmailSuccess } from "../../components/Alert"
+import StreetMap from "../../components/StreetMap"
 
 const Contact = () => {
   const splitContact = "Contactez-moi".split("")
@@ -23,11 +23,11 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-    .sendForm(
-      process.env.REACT_APP_MY_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      refForm.current,
-      process.env.REACT_APP_PUBLIC_KEY
+      .sendForm(
+        process.env.REACT_APP_MY_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        refForm.current,
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {

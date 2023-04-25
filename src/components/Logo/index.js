@@ -1,5 +1,5 @@
 import "./index.scss"
-import LogoGV from "../../../assets/images/Logo GV noir & or 3D final.webp"
+import LogoGV from "../../assets/images/Logo GV noir & or 3D final.webp"
 
 const Logo = () => {
   return (

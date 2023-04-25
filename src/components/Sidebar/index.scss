@@ -83,6 +83,13 @@ nav {
     }
   }
 
+  a.portfolio-link {
+    &::after {
+      content: "PORTFOLIO";
+      letter-spacing: 1px;
+    }
+  }
+
   a.contact-link {
     &::after {
       content: "CONTACT";

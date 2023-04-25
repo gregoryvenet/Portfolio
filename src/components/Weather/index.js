@@ -123,7 +123,7 @@ const Weather = () => {
     <div className="weather-container">
       {weatherData && (
         <>
-          <h3>{weatherData.name}</h3>
+          <h4>{weatherData.name}</h4>
           <h4>{weatherData.weather[0].description}</h4>
           {getWeatherIcon()}
           <div className="thermo-container">

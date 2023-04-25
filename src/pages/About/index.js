@@ -1,5 +1,5 @@
 import "./index.scss"
-import AnimatedLetters from "../AnimatedLetters"
+import AnimatedLetters from "../../components/AnimatedLetters"
 import { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -44,8 +44,7 @@ const About = () => {
           pour ne citer qu’eux. Mais aussi, j’ai appris à manipuler les langages
           html5, css3, Sass, Javascript, React. Un peu de python pour m’amuser
           ainsi que Scratch. J’ai également travaillé avec les bases de données
-          comme MySQL puis MongoDB et dernièrement avec le CMS Wordpress par
-          curiosité et selon les besoins client.
+          comme MySQL puis MongoDB et dernièrement avec le CMS Wordpress selon les besoins client.
         </p>
         <p>
           Etant dans un domaine en constante évolution mais aussi féru de

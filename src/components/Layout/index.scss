@@ -34,12 +34,12 @@
 
 .container {
   width: 100%;
+  height: 100%;
   will-change: contents;
-  height: 90%;
   min-height: 566px;
   position: absolute;
   opacity: 0;
-  top: 5%;
+  top: 0;
   margin: 0 auto;
   z-index: 1;
   transform-style: preserve-3d;
@@ -88,7 +88,7 @@
     }
 
     p {
-      font-size: 13px;
+      font-size: 14px;
       color: whitesmoke;
       font-family: sans-serif;
       font-weight: 300;
@@ -115,11 +115,9 @@
   .text-zone {
     position: absolute;
     left: 10%;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     width: 35%;
-    vertical-align: middle;
-    display: table-cell;
     max-height: 90%;
   }
 
@@ -131,30 +129,23 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .page {
-    position: initial;
-  }
 
   .container {
-    position: initial;
     height: 100%;
-    min-height: auto;
+    margin-left: 8rem;
 
     &.contact-page,
     &.about-page,
     &.portfolio-page {
       .text-zone {
-        position: initial;
         transform: none;
-        width: 100%;
-        display: block;
-        padding: 20px;
-        box-sizing: border-box;
+        width: 60%;
+        padding-left: 5rem;
       }
     }
 
     &.portfolio-page {
-      width: 100%;
+      width: 90%;
       padding: 20px;
       box-sizing: border-box;
 

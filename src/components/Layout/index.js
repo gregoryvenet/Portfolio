@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
-import Sidebar from "../Sidebar/"
+import Sidebar from "../Sidebar"
 import "./index.scss"
-import {AlertBuild}  from "../Alert"
+import { AlertBuild } from "../Alert"
 
 const Layout = () => {
   return (

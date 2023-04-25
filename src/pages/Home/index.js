@@ -3,8 +3,8 @@ import LogoTitle from "../../assets/images/Logo G noir recadré.webp"
 import { Link } from "react-router-dom"
 import "./index.scss"
 import { useState } from "react"
-import AnimatedLetters from "../AnimatedLetters"
-import Logo from "./Logo"
+import AnimatedLetters from "../../components/AnimatedLetters"
+import Logo from "../../components/Logo"
 import Loader from "react-loaders"
 
 const Home = () => {

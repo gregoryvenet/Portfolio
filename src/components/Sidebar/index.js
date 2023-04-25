@@ -2,13 +2,13 @@ import "./index.scss"
 import { Link, NavLink } from "react-router-dom"
 import LogoGV from "../../assets/images/Logo GV noir & or 3D final.webp"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faHome, faUser, faEnvelope, faSuitcase } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import Weather from "../Weather"
 
 const Sidebar = () => (
   <div className="nav-bar">
-    <Link to="/Portfolio">
+    <Link to="/">
       <img src={LogoGV} alt="logo Grégory VENET" />
       <h3>Grégory VENET</h3>
     </Link>
@@ -17,9 +17,9 @@ const Sidebar = () => (
       <NavLink
         exact="true"
         activeclassname="active"
-        to="/Portfolio"
+        to="/"
         role="dialog"
-        aria-label="Portfolio"
+        aria-label="accueil"
       >
         <FontAwesomeIcon
           icon={faHome}
@@ -40,6 +40,21 @@ const Sidebar = () => (
           icon={faUser}
           color="#4d4d4e"
           aria-label="icone page à propos"
+          tabindex="-1"
+        />
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="portfolio-link"
+        to="/portfolio"
+        role="dialog"
+        aria-label="portfolio"
+      >
+        <FontAwesomeIcon
+          icon={faSuitcase}
+          color="#4d4d4e"
+          aria-label="icone page portfolio"
           tabindex="-1"
         />
       </NavLink>
