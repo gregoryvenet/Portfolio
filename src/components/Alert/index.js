@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify"
 
 export const AlertBuild = () => {
     toast.warning(
-      "Patience, Portfolio en construction! Des mises à jour vont être ajoutées ces prochains jours. Vous pouvez me contacter à la page contact.",
+      "Portfolio en construction! Vous pouvez me contacter à la page contact.",
       {
         position: "top-center",
         autoClose: false,
