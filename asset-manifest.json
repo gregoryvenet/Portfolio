@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bb453f78.css",
-    "main.js": "/Portfolio/static/js/main.6f1b994c.js",
+    "main.css": "/Portfolio/static/css/main.bbcd99c9.css",
+    "main.js": "/Portfolio/static/js/main.b6ae35be.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Logo GV noir & or 3D final.webp": "/Portfolio/static/media/Logo GV noir & or 3D final.dc8874c544f8ab1cde7f.webp",
     "static/media/Logo G noir recadré.webp": "/Portfolio/static/media/Logo G noir recadré.9ef8d5088c4f9b48c0c8.webp",
@@ -30,12 +30,12 @@
     "static/media/clearSkyNight.svg": "/Portfolio/static/media/clearSkyNight.9ed9031b8fd64da63790aab749eedfa9.svg",
     "static/media/clearSkyDay.svg": "/Portfolio/static/media/clearSkyDay.54288da67b71b4b19483d373d683257f.svg",
     "static/media/scatteredClouds.svg": "/Portfolio/static/media/scatteredClouds.f6e6108ec3b4605bda2aca61f011e8e8.svg",
-    "main.bb453f78.css.map": "/Portfolio/static/css/main.bb453f78.css.map",
-    "main.6f1b994c.js.map": "/Portfolio/static/js/main.6f1b994c.js.map",
+    "main.bbcd99c9.css.map": "/Portfolio/static/css/main.bbcd99c9.css.map",
+    "main.b6ae35be.js.map": "/Portfolio/static/js/main.b6ae35be.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb453f78.css",
-    "static/js/main.6f1b994c.js"
+    "static/css/main.bbcd99c9.css",
+    "static/js/main.b6ae35be.js"
   ]
 }
