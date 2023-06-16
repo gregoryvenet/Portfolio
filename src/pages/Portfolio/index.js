@@ -5,14 +5,14 @@ import axios from "axios"
 import Loader from "react-loaders"
 
 const Portfolio = () => {
-  const SplitPortfolio = "Portfolio".split("")
   const [letterClass, setLetterClass] = useState("text-animate")
+  const SplitPortfolio = "Portfolio".split("")
   const UserNameGithub = process.env.REACT_APP_USERNAME_GITHUB
   const AccessTokenGithub = process.env.REACT_APP_GITHUB_KEY
 
-  const [totalViews, setTotalViews] = useState(0)
-  const [totalClones, setTotalClones] = useState(0)
-  const [totalRepos, setTotalRepos] = useState(0)
+  const [totalRepos, setTotalRepos] = useState(null)
+  const [totalViews, setTotalViews] = useState(null)
+  const [totalClones, setTotalClones] = useState(null)
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,7 +21,6 @@ const Portfolio = () => {
   }, [])
 
   useEffect(() => {
-    // Utiliser axios pour récupérer la liste des répertoires.
     axios
       .get(
         `https://api.github.com/users/${UserNameGithub}/repos?per_page=1000`,
@@ -34,7 +33,6 @@ const Portfolio = () => {
       .then((response) => {
         setTotalRepos(response.data.length)
         const repos = response.data.map((repo) => repo.full_name)
-        // Boucle pour chaque repo, en utilisant l'API de trafic de Github pour récupérer les informations de trafic.
         for (const repo of repos) {
           axios
             .get(`https://api.github.com/repos/${repo}/traffic/views`, {
@@ -59,8 +57,8 @@ const Portfolio = () => {
             .catch((error) => console.error(error))
         }
       })
-      .catch((error) => console.error(error))
-  }, [])
+      .catch((error) => console.error(error.message))
+  }, [AccessTokenGithub, UserNameGithub])
 
   return (
     <>
@@ -76,9 +74,9 @@ const Portfolio = () => {
         <table>
           <thead>
             <tr>
-              <th>Nombre de repositories</th>
-              <th>Nombre total de vues</th>
-              <th>Nombre total de clonages</th>
+              <th>Total de projets</th>
+              <th>Total de vues</th>
+              <th>Total de clonages</th>
             </tr>
           </thead>
           <tbody>
