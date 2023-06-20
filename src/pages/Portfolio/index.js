@@ -10,9 +10,9 @@ const Portfolio = () => {
   const UserNameGithub = process.env.REACT_APP_USERNAME_GITHUB
   const AccessTokenGithub = process.env.REACT_APP_GITHUB_KEY
 
-  const [totalRepos, setTotalRepos] = useState(null)
-  const [totalViews, setTotalViews] = useState(null)
-  const [totalClones, setTotalClones] = useState(null)
+  const [totalRepos, setTotalRepos] = useState(0)
+  const [totalViews, setTotalViews] = useState(0)
+  const [totalClones, setTotalClones] = useState(0)
 
   useEffect(() => {
     setTimeout(() => {
