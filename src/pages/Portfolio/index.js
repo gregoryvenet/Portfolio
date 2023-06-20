@@ -8,7 +8,7 @@ const Portfolio = () => {
   const [letterClass, setLetterClass] = useState("text-animate")
   const SplitPortfolio = "Portfolio".split("")
   const UserNameGithub = process.env.REACT_APP_USERNAME_GITHUB
-  const AccessTokenGithub = process.env.REACT_APP_GITHUB_KEY
+  const AccessTokenGithub = process.env.REACT_APP_GITHUB_TOKEN
 
   const [totalRepos, setTotalRepos] = useState(0)
   const [totalViews, setTotalViews] = useState(0)

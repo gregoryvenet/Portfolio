@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "gh-pages -d build -e REACT_APP_GITHUB_KEY=$REACT_APP_GITHUB_KEY",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -59,6 +59,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "author": "",
+  "author": "Grégory VENET",
   "license": "ISC"
 }
