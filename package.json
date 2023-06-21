@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "gh-pages -d build -s",
+    "deploy": "gh-pages -d build -a '!static/*'",
     "predeploy": "npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
